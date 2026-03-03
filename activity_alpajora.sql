@@ -1,45 +1,50 @@
-CREATE DATABASE birds;
-CREATE DATABASE toys;
-CREATE DATABASE movies;
-CREATE DATABASE books;
-CREATE DATABASE vehicles;
+CREATE DATABASE birds_db;
+CREATE DATABASE toys_db;
+CREATE DATABASE movies_db;
+CREATE DATABASE books_db;
+CREATE DATABASE vehicles_db;
 
-CREATE TABLE birds.bird (
+CREATE TABLE birds_db.bird (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    name TEXT
+    name TEXT,
+    color TEXT
 );
 
-CREATE TABLE toys.toy (
+CREATE TABLE toys_db.toy (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    name TEXT
+    name TEXT,
+    category TEXT
 );
 
-CREATE TABLE movies.movie (
+CREATE TABLE movies_db.movie (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    name TEXT
+    name TEXT,
+    category TEXT
 );
 
-CREATE TABLE books.book (
+CREATE TABLE books_db.book (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    name TEXT
+    name TEXT,
+    author TEXT
 );
 
-CREATE TABLE vehicles.vehicle (
+CREATE TABLE vehicles_db.vehicle (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    name TEXT
+    type TEXT,
+    brand TEXT
 );
 
-INSERT INTO birds.bird (name)
-VALUES ('MAYA');
+INSERT INTO birds_db.bird (name, color)
+VALUES ('Maya', 'Brown');
 
-INSERT INTO toys.toy (name)
-VALUES ('Hotwheels');
+INSERT INTO toys_db.toy (name, category)
+VALUES ('Hotwheels', 'Cars');
 
-INSERT INTO movies.movie (name)
-VALUES ('Demon Slayer: Infinity Castle');
+INSERT INTO movies_db.movie (name, category)
+VALUES ('Demon Slayer: Infinity Castle', 'Fantasy');
 
-INSERT INTO books.book (name)
-VALUES ('Filipino');
+INSERT INTO books_db.book (name, author)
+VALUES ('Filipino', 'Juan Dela Cruz');
 
-INSERT INTO vehicles.vehicle (name)
-VALUES ('Toyota');
+INSERT INTO vehicles_db.vehicle (type, brand)
+VALUES ('Car', 'Sedan');
